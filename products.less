@@ -1,0 +1,485 @@
+/*--- Variables -------------------*/
+@red: #b70d30;
+@orange: #e17b1f;
+@grey: #6d6b70;
+@teal: #369f9f;
+
+
+.products {
+	font-size: 1em;
+	* {
+		box-sizing: border-box;
+	}
+
+	#system-message {
+		display: none;
+	}
+
+	&.maintenance {
+		#midCol {
+			.jbIntroText h2, .jbIntroText h3, .jbIntroText h4, .jbIntroText h5 {
+				color: @red;
+			}
+			.jbIntroText a.download-sds {
+				background: @red;
+				color: #fff;
+
+				&:hover {
+					background: darken(@red, 5%)
+				}				
+			}
+		}
+
+		.itemListCategory h2,
+		.contentheading,
+		.jbIntroText ul li:before,
+		.slider-head {
+			color: @red !important;
+		}
+	}
+
+	&.lubricants {
+		#midCol {
+			.jbIntroText h2, .jbIntroText h3, .jbIntroText h4, .jbIntroText h5 {
+				color: @orange;
+			}
+			.jbIntroText a.download-sds {
+				background: @orange;
+				color: #fff;
+				&:hover {
+					background: darken(@orange, 5%)
+				}
+			}
+			.cust-prod-filter ul li.active a {
+				background: @orange;
+			}
+		}
+
+		.itemListCategory h2,
+		.contentheading,
+		.jbIntroText ul li:before,
+		.slider-head {
+			color: @orange !important;
+		}
+	}
+
+	&.wastewater {
+		#midCol {
+			.jbIntroText h2, .jbIntroText h3, .jbIntroText h4, .jbIntroText h5 {
+				color: @teal;
+			}
+			.jbIntroText a.download-sds {
+				background: @teal;
+				color: #fff;
+				&:hover {
+					background: darken(@teal, 5%)
+				}
+			}
+			.cust-prod-filter ul li.active a {
+				background: @teal;
+			}
+		}
+
+		.itemListCategory h2,
+		.contentheading,
+		.jbIntroText ul li:before,
+		.slider-head {
+			color: @teal !important;
+		}
+	}
+
+	&.partsmaster {
+		#midCol {
+			.jbIntroText h2, .jbIntroText h3, .jbIntroText h4, .jbIntroText h5 {
+				color: @grey;
+			}
+			.jbIntroText a.download-sds {
+				background: @grey;
+				color: #fff;
+				&:hover {
+					background: darken(@grey, 5%)
+				}
+			}
+			.cust-prod-filter ul li.active a {
+				background: @grey;
+			}
+		}
+
+		.itemListCategory h2,
+		.contentheading,
+		.jbIntroText ul li:before,
+		.slider-head {
+			color: @grey !important;
+		}
+	}
+
+	#zenkit {
+		position: static;
+	}
+
+	#abovecontent {
+		margin-top: 0 !important;
+	}
+
+	#mainContent {
+		padding-top: 50px;
+	}
+
+	#midCol {
+		.itemListCategory {
+			position: absolute;
+			top: 35px;
+			background: transparent;
+			border: none;
+			padding: 0;
+			margin: 0;
+
+			h2, h3, h4 {
+				margin-bottom: 0.8em !important;
+				padding-bottom: 0 !important;
+				text-transform: uppercase;
+				font-size: unit(30/16, em);
+				font-weight: 700;
+				color: @red;
+			}
+
+			h4 {
+				font-size: unit(24/16, em);
+			}
+		}
+		.itemBody {
+			padding-top: 0;
+		}
+
+		.imageBlock {
+			width: 20%;
+			margin: 0 0 -55px 0;
+			float: right;
+		}
+
+		.contentBlock {
+			width: 100%;
+			margin: 0;
+
+			h2.contentheading {
+				padding: 0 20% 0 0 !important;
+				margin-bottom: unit(10/16, em) !important;
+				text-transform: capitalize;
+				font-size: unit(20/16, em);
+
+				a {
+					padding: 0;
+					margin: 0;
+					font-size: 1em;
+					font-weight: 700;
+					text-transform: inherit;
+					color: inherit;
+				}
+			}//h2
+		}//contentblock
+
+		.jbIntroText {
+			h3:first-child {
+				margin-bottom: 1.25em;
+				padding-bottom: 1.25em;
+				padding-right: 20%;
+				font-size: 1em;
+				font-weight: 400;
+				color: #333;
+				border-bottom: 1px solid #d6d5d5;
+			}
+
+			h2, h3, h4, h5 {
+				margin-bottom: 1em;
+				font-weight: 400;
+				font-size: 1em;
+				text-transform: none;
+			}
+
+
+			ul {
+				margin: 0 0 1em 0;
+
+				li {
+					position: relative;
+					padding-left: 1em;
+					padding-bottom: .5em;
+
+					&:before {
+						position: absolute;
+						left: 0;
+						top: 0;
+						display: inline-block;
+						content: '\f105';
+						font-family: 'FontAwesome';
+						font-weight: 600;
+						margin-right: .875em;						
+					}
+				}
+			}//ul
+
+			table {
+				th {
+					padding: 0.7em 1.4em;
+					font-size: 0.875em;
+					font-weight: 400;
+					text-align: left;
+					color: #fff;
+					background: #4e4e4e;
+				}
+
+				tr {
+					background: #f4f4f4;
+
+					td {
+						padding: 0.7em 1.4em;
+						font-size: 0.875em;
+
+						&:first-child {
+							border-right: 2px solid #fff;
+						}
+					}
+				}//tr
+			}//table 
+
+			.slider-head {
+				margin: 0 0 1em 0;
+				font-size: 0.875em;
+
+				&.less {
+					&:after {
+						content: '\f063';
+					}
+				}
+
+				a {
+					color: inherit;
+					font-weight: 400;
+				}
+
+				&:after {
+					content: '\f062';
+					display: inline-block;
+					margin-left: 1em;
+					font-family: 'FontAwesome';
+				}
+			}//slider
+
+			.slider-content {
+				&.less {
+					display: none;
+				}
+			}
+
+			
+			a.request-demo,
+			a.how-to-purchase,
+			a.download-sds {
+				display: inline-block;
+				margin: 0 0 .5em 0;
+				padding: .5em 1em;
+				width: 100%;
+				float: left;
+				font-size: 0.875em !important;
+				font-weight: 400;
+				color: #333;
+				line-height: 1.125em;
+				background: #f4f4f4;					
+
+				&:hover {
+					text-decoration: none;
+					background: darken(#f4f4f4, 5%)
+				}
+
+
+			}
+
+			@media screen and (min-width: 380px) {
+				a.request-demo,
+				a.how-to-purchase,
+				a.download-sds {
+					width: 48%;
+					margin: 0 4% .5em 0;					
+				}
+
+				a.how-to-purchase {
+					margin-right: 0;				
+				}
+			}
+		
+		}//introtext
+
+		// gallery
+		ul.sigProContainer {
+			padding: 0;
+			margin: 1em 0;
+
+			li {
+				width: 48%;
+				float: left;
+				border: 1px solid #d6d5d5;
+				margin: 0 4% 1em 0;
+				padding: .5em;
+
+				&:before {
+					display: none !important;
+				}
+
+				.sigProLinkOuterWrapper {
+					padding: 0;
+					margin: 0;
+					float: none;
+				}
+				.sigProLinkWrapper {
+					padding: 0;
+			    margin: 0;
+			    border: 0;
+			    float: none;
+
+			    > a {
+			    	width: 100% !important;
+			    	height: auto !important;
+
+			    	img {
+			    		width: 100% !important;
+			    		height: auto !important;
+			    		background-size: contain;
+			    	}
+
+			    	.sigProPseudoCaption,
+			    	.sigProCaption {
+			    		display: none;
+			    	}
+			    }
+				}
+			}//li
+
+			@media screen and (max-width: 999px) {
+				li {
+				 	&:nth-child(even) {
+						margin-right: 0;
+					}
+				}//	
+			}//max-width 999px
+
+			@media screen and (min-width: 1000px) {
+				li {
+					width: 23.5%;
+					margin-right: 2%;
+
+					&:nth-child(4) {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
+		.cust-prod-filter {
+			margin-bottom: 1em;
+			position: relative;
+			top: 60px;
+
+			p {
+				margin-bottom: .5em;
+				font-size: unit(14/16, em);
+				display: inline-block;
+
+				&:after {
+					content: '\f105';
+					font-family: 'FontAwesome';
+					display: inline-block;
+					margin: 0 1em;
+				}
+			}//p
+
+			ul {
+				margin: 0;
+				display: inline-block;
+				list-style: none;
+
+				li {
+					display: inline-block;
+					margin: 0 0.5em .3em 0;
+					font-size: 1em;
+
+					a {
+						display: inline-block;
+						padding: 0.4em 2em;
+						font-size: unit(12/16, em);
+						font-weight: 400;
+						line-height: 1.125em;
+						color: #333;
+						background: #f4f4f4;
+						border-radius: 30px;
+						color: #333;
+						font-weight: 400;
+
+						&:hover {
+							text-decoration: none;
+							background: darken(#f4f4f4, 5%);
+						}
+
+						&:focus {
+							text-decoration: none;
+							outline: none;
+						}
+					}//a
+
+					&.active a {
+						background: @red;
+						color: #fff;
+					}
+				}
+			}
+		}	//p
+	}//midcol	
+
+@media screen and (min-width: 420px) and (max-width: 600px) {
+		#midCol {
+			.imageBlock {
+				width: 22%;
+				float: left;
+				margin: 0;
+			}
+			.contentBlock {
+				width: 78%;
+				float: left;
+				margin: 0;
+			}
+		}
+	}
+	
+
+	@media screen and (min-width: 760px) {
+		#midCol {
+			.imageBlock {
+				width: 22%;
+				float: left;
+				margin: 0;
+			}
+			.contentBlock {
+				width: 78%;
+				float: left;
+				margin: 0;
+			}
+
+			.cust-prod-filter {
+				p {
+					font-size: 1em;
+				}
+			}
+		}//midcol
+	}
+}//products
+
+
+.fancybox-title.fancybox-title-inside-wrap {
+	display: none;
+}
+
+.fancybox-wrap {
+	a:active,
+	a:focus {
+		position: static;
+	}
+}
