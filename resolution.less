@@ -630,7 +630,7 @@ body.resolution {
 	#topwrap {
 		padding: 10px 0;
 		background: @blue;
-
+		margin-top: 32px;
 		.container {
 			max-width: 1730px;
 			padding: 0;
@@ -640,11 +640,58 @@ body.resolution {
 	#top1 {
 		width: 100%;
 		margin: 0;
+		position: absolute;
+		top: 50px;
+		left: 0;
+		background: #002542;
+		padding: 5px 0;
+		text-align: center;
+		.moduletable {
+			max-width: 1730px;
+			width: 90% !important;
+			margin: 0 auto;
+			p {
+				margin-bottom: 0;
+				a {
+					font-size: 12px;
+					color: #ffffff;
+					line-height: 20px;
+					text-decoration: none;
+					&:before {
+						content: '\f060';
+						font-family: 'fontawesome';
+						font-size: inherit;
+						display: inline-block;
+						margin-right: 15px;
+						transition: margin .4s ease-out;
+					}
+					&:hover {
+						&:before {
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+		}
 	}
 
-	#top2 {
+
+	#top2  {
+		.rs-logo {
+			padding-left: 0 !important;
+			max-width: 270px;
+			width: 40%;
+			margin: 0 auto;
+			float: none;
+		}
+		p {
+			margin-bottom: 10px;
+		}
+	}
+	#top3 {
 		display: none;
 		text-align: center;
+		margin: 0;
 
 		.rs-menu {
 			padding-left: 0 !important; // removes padding applied from main theme
@@ -672,11 +719,6 @@ body.resolution {
 		}//rs-menu
 	}//top2
 
-	.rs-logo {
-		max-width: 270px;
-		width: 40%;
-		margin: 0 auto;
-	}
 
 	#bannerwrap {
 		background: @white;
@@ -741,7 +783,17 @@ body.resolution {
 
 @media screen and (min-width: 790px) {
 	.resolution {
+
+		#top1 {
+			top: -32px;
+			text-align: left;
+		}
+
 		#top2 {
+			width: 100%;
+			text-align: center;
+		}
+		#top3 {
 			display: block;
 			width: 100%;
 		}
@@ -827,7 +879,7 @@ body.resolution {
 			padding: 20px 0;
 		}
 
-		#top2 {
+		#top3 {
 			.rs-menu {
 				ul li {
 					a {
@@ -845,25 +897,29 @@ body.resolution {
 			padding: 25px 0;
 		}
 
-		#top1 {
+		#top2 {
 			display: inline-block;
 			width: 15%;
 			float: none;
 			margin-right: 2%;
 			vertical-align: middle;
+			p {
+				margin-bottom: 10px;
+			}
+			.rs-logo {
+				width: 100%;
+				margin-bottom: 0;
+			}
 		}
 
-		#top2 {
+		#top3 {
 			display: inline-block;
 			width: 82%;
 			float: none;
 			vertical-align: middle;
 		}
 
-		.rs-logo {
-			width: 100%;
-			margin-bottom: 0;
-		}
+
 
 		#banner {
 			.resolution-banner {
@@ -874,7 +930,7 @@ body.resolution {
 		}
 
 		&.rs-home {
-			#top2 {
+			#top3 {
 				width: 100%;
 			}
 		}
