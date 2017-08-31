@@ -275,7 +275,8 @@ body.resolution {
 	}
 }//resolution
 
-.resolution.com_content.article {
+.resolution.com_content.article,
+.resolution.com_breezingforms.article {
 	#midCol {
 		margin: 0 0 30px 0;
 
@@ -2942,5 +2943,88 @@ html:lang(ro-ro) {
 	body.resolution .res-breadcrumb a+span {
 		display: inline-block;
 		margin-top: 13px;
+	}
+}
+
+
+
+.resolution-past {
+	#belowcontent {
+		a.btn-white {
+			.btn-round(@white, @blue_light);
+			font-size: 1em;
+		}
+
+		a.btn-white-border {
+			.btn-round(#025d9d, @white);
+			border: 2px solid @white;
+		}
+		.cta-banner.subscribe {
+			background: #025d9d url(../images/resolution/magazine-cta-bg.png) no-repeat left bottom;
+		}
+
+		.cta-banner {
+			padding: 20px;
+			text-align: center;
+			background: #025d9d;
+			width: 100% ;
+			font-size: 16px;
+			box-sizing: border-box;
+			p {
+				font-size: 1.25em;
+				line-height: 1.125em;
+				color: @white;
+			}
+
+			aside.buttons {
+				a {
+					display: inline-block;
+					margin: .5em;
+				}
+			}//aside
+
+			@media screen and (min-width: 1090px) {
+				position: relative;
+				text-align: left;
+				float: left;
+				width: 100%;
+				padding: 30px;
+				margin-bottom: 30px;
+
+				p {
+					position: absolute;
+					top: 50%;
+					width: 66%;
+					float: left;
+					.translateY;
+				}
+
+				aside.buttons {
+					width: 29%;
+					float: right;
+					text-align: right;
+
+					a {
+						margin-top: 0;
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			@media screen and (min-width: 1460px) {
+				padding: 40px 31px;
+
+				p {
+					font-size: 1.625em;
+				}
+			}
+		}//cta-banner
+	}
+}
+
+
+.resolution {
+	.moduletable.lang-switcher {
+		display: none !important;
 	}
 }
